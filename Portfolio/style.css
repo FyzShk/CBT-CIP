@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+    background: linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    position: fixed;
+    width: 100%; 
+    top: 0; 
+    z-index: 1000; 
+
+}
+
+.navlist {
+    display: flex;
+    list-style: none;
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 25px;
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+    /* position: fixed; */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.navlist li {
+    padding: 5px 30px;
+    font-size: 12px;
+    font-weight: 600;
+    transition: .5s;
+}
+
+.navlist li:hover {
+    background-color: rgba(128, 128, 128, 0.693);
+    border-radius: 25px;   
+
+}
+
+.navlist a{
+    text-decoration: none;
+    color: black;
+}
+
+.sec{
+    width: 100%;
+    margin: auto;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sec2{
+    width: 100%;
+    margin: auto;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sec3{
+    width: 100%;
+    margin: auto;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

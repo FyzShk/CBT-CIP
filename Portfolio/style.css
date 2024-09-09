@@ -7,6 +7,10 @@
 
 }
 
+:root{
+    --textclr: white;
+}
+
 
 body {
     background: linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
@@ -17,9 +21,9 @@ body {
     justify-content: center;
     margin-top: 25px;
     position: fixed;
-    width: 100%; 
-    top: 0; 
-    z-index: 1000; 
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 
 }
 
@@ -45,16 +49,34 @@ body {
 
 .navlist li:hover {
     background-color: rgba(128, 128, 128, 0.693);
-    border-radius: 25px;   
+    border-radius: 25px;
 
 }
 
-.navlist a{
+.navlist a {
     text-decoration: none;
     color: black;
 }
 
-.sec{
+.sec {
+    width: 100%;
+    margin: auto;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.sec h1{
+    color: var(--textclr);
+    font-size: 35px;
+}
+
+.sec span{
+    color: rgb(0, 0, 0);
+}
+.sec2 {
     width: 100%;
     margin: auto;
     height: 500px;
@@ -62,7 +84,8 @@ body {
     justify-content: center;
     align-items: center;
 }
-.sec2{
+
+.sec3 {
     width: 100%;
     margin: auto;
     height: 500px;
@@ -70,11 +93,53 @@ body {
     justify-content: center;
     align-items: center;
 }
-.sec3{
-    width: 100%;
-    margin: auto;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+/* .sec div{
+    width: 35%;
+} */
+
+.sec p{
+    color:var(--textclr)
 }
+
+.tech{
+    color: white;
+    transform: translateY(1000%);
+    animation: slideup 1s cubic-bezier(0.42, 0, 0.46, 1.08) 1  forwards;
+    text-align: center;
+    width: 20vw;
+}
+
+@keyframes slideup{
+    from{
+        transform: translateY(-100);
+    }
+    to{
+        transform: translateY(0)
+    }
+}
+
+.tech svg{
+    
+    width: 55px;
+    height: 55px;
+}
+
+
+.about{
+    animation: slideleft 1s cubic-bezier(0.42, 0, 0.46, 1.08) 1 forwards;
+    transform: translateX(-100%);
+    width: 37%;
+    
+}
+
+@keyframes slideleft{
+    from{
+        transform: translateX(-100);
+    }
+
+    to{
+        transform: translateX(0);
+    }
+}
+

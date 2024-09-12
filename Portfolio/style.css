@@ -7,13 +7,16 @@
 
 }
 
-:root{
+:root {
     --textclr: white;
 }
 
 
 body {
     background: linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    /* background: linear-gradient(90deg, rgba(33,150,243,1) 0%, rgba(3,169,244,1) 100%); */
+    color: #f4f4f4;
+    /* Lighter text for better contrast */
 }
 
 .navbar {
@@ -41,10 +44,11 @@ body {
 }
 
 .navlist li {
-    padding: 5px 30px;
+    list-style: none;
+    /* padding: 5px 30px;
     font-size: 12px;
     font-weight: 600;
-    transition: .5s;
+    transition: .5s; */
 }
 
 .navlist li:hover {
@@ -56,30 +60,81 @@ body {
 .navlist a {
     text-decoration: none;
     color: black;
+    display: block; /* Make anchor tag block-level */
+    padding: 5px 30px; /* Move padding from li to a */
+    font-size: 12px;
+    font-weight: 600;
+    transition: 0.5s;
 }
 
 .sec {
     width: 100%;
     margin: auto;
-    height: 500px;
+    height: 650px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
 
-.sec h1{
-    color: var(--textclr);
+.sec h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    /* color: var(--textclr); */
     font-size: 35px;
+    margin-bottom: 1.5rem; /* Adds space below h1 */
 }
 
-.sec span{
+.sec p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #e0e0e0;
+    margin-top: 1rem; /* Adds space above p */
+}
+
+.sec span {
     color: rgb(0, 0, 0);
 }
+
+.sec a {
+    display: inline-block; /* Ensures the anchor behaves like a block for margin to apply */
+    margin-top: 2rem; /* Add space above the SVG */
+    text-align: center; /* Centers the SVG inside the anchor */
+}
+
+.sec svg {
+    width: 25px;
+    height: 25px;
+}
+
+@media (max-width: 768px) {
+    .sec a {
+        margin-top: 1.5rem; /* Adjust spacing for smaller devices */
+    }
+
+    .sec svg {
+        width: 40px; /* Resize SVG for smaller devices */
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sec a {
+        margin-top: 1rem; /* Further reduce space on very small screens */
+    }
+
+    .sec svg {
+        width: 35px; /* Resize SVG for mobile devices */
+        height: 35px;
+    }
+}
+
 .sec2 {
     width: 100%;
     margin: auto;
-    height: 500px;
+    min-height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,48 +153,149 @@ body {
     width: 35%;
 } */
 
-.sec p{
-    color:var(--textclr)
-}
 
-.tech{
+.tech {
     color: white;
     transform: translateY(1000%);
-    animation: slideup 1s cubic-bezier(0.42, 0, 0.46, 1.08) 1  forwards;
+    animation: slideup 1s cubic-bezier(0.42, 0, 0.46, 1.08) 1 forwards;
     text-align: center;
     width: 20vw;
 }
 
-@keyframes slideup{
-    from{
+@keyframes slideup {
+    from {
         transform: translateY(-100);
     }
-    to{
+
+    to {
         transform: translateY(0)
     }
 }
 
-.tech svg{
-    
+.tech svg {
+
     width: 55px;
     height: 55px;
 }
 
 
-.about{
+.about {
     animation: slideleft 1s cubic-bezier(0.42, 0, 0.46, 1.08) 1 forwards;
     transform: translateX(-100%);
     width: 37%;
-    
+
 }
 
-@keyframes slideleft{
-    from{
+@keyframes slideleft {
+    from {
         transform: translateX(-100);
     }
 
-    to{
+    to {
         transform: translateX(0);
     }
 }
+
+.project1 {
+    width: 30vw;
+    /* height: 30vh; */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.project1 h2 {
+    color: black;
+    font: 600;
+
+}
+
+.project1 p {
+    font-family: robot;
+    color: white;
+    font-size: small;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.project1 span {
+    color: black;
+}
+
+.project1 video {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    margin-top: 90px;
+}
+
+.project1 a {
+    /* color: #ffffff;
+    text-decoration: none;
+    border: 1px solid #ffffff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 10px;
+    display: inline-block; */
+    align-items: center;
+    margin: 5px;
+    text-decoration: none;
+  appearance: none;
+  background-color: #fff;
+  border-radius: 24px;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+  box-sizing: border-box;
+  color: #3c4043;
+  cursor: pointer;
+  display: inline-flex;
+  fill: currentcolor;
+  font-family: "Google Sans",Roboto,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: .25px;
+  line-height: normal;
+  max-width: 100%;
+  overflow: visible;
+  padding: 2px 24px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+  will-change: transform,opacity;
+  z-index: 0;
+
+}
+
+.project1 a:hover {
+    background: #F6F9FE;
+    color: #174ea6;
+  
+}
+
+
+@media (max-width: 768px) {
+    .sec {
+      flex-direction: column;
+      padding: 50px 20px;
+    }
+  
+    .navlist li {
+      padding: 10px 20px;
+    }
+  
+    h1 {
+      font-size: 28px;
+    }
+  }
 
